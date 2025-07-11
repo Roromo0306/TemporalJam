@@ -4,39 +4,20 @@ using UnityEngine;
 
 public class JuegoColores : MonoBehaviour
 {
-    public GameObject gen1, gen2, gen3, rojo, azul, amarillo, barraInferior;
+    public GameObject gen1, gen2, gen3, rojo, azul, amarillo;
 
     public int puntos;
     public int lugarGeneracion, bloque;
-
-    private SpriteRenderer Barra;
     void Start()
     {
         InvokeRepeating("generacion", 0f, 3f); 
-        Barra = barraInferior.GetComponent<SpriteRenderer>();
+        
     }
 
    
     void Update()
     {
-        CambioColor();
-    }
-
-    //Funcion que cambia el color de la barra al pulsar una tecla
-    private void CambioColor()
-    {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            Barra.color = Color.cyan;
-            StartCoroutine(VueltaBlanco());
-        }
-    }
-
-    //Corrutina para volver la barra blanca
-    IEnumerator VueltaBlanco()
-    {
-        yield return new WaitForSeconds(0.5f);
-        Barra.color = Color.white;
+   
     }
 
     //Funcion que genera los cuadrados en sus generadores

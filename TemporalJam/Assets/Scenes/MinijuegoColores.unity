@@ -318,6 +318,7 @@ GameObject:
   - component: {fileID: 1549176047}
   - component: {fileID: 1549176046}
   - component: {fileID: 1549176045}
+  - component: {fileID: 1549176048}
   m_Layer: 0
   m_Name: BordeInferior
   m_TagString: Untagged
@@ -433,6 +434,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1549176048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549176044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8225c9afe79f70f42ad55117ddb55cbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barraInferior: {fileID: 1549176044}
+  manager: {fileID: 1648330424}
 --- !u!1 &1648330424
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,7 +483,6 @@ MonoBehaviour:
   rojo: {fileID: 2694707811793861909, guid: 5c6153b6bc7eb1844b31404add12a005, type: 3}
   azul: {fileID: 118872743512156549, guid: 5aec3a70beee35e44accb079289b0f3f, type: 3}
   amarillo: {fileID: 3320740797908009355, guid: 300e280a239831d4488ede67fea7ab90, type: 3}
-  barraInferior: {fileID: 1549176044}
   puntos: 0
   lugarGeneracion: 0
   bloque: 0

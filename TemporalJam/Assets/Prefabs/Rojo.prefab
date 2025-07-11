@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2901905729794402858}
   - component: {fileID: 7252849387404999771}
   - component: {fileID: 3497519620746375087}
+  - component: {fileID: 2572473269924616879}
   m_Layer: 0
   m_Name: Rojo
   m_TagString: Untagged
@@ -94,9 +95,9 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2694707811793861909}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -158,3 +159,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2572473269924616879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2694707811793861909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be8ebf6655c7d6f4cbd14e33a38fa648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 1
