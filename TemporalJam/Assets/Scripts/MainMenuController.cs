@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class MainMenuController : MonoBehaviour
     // Update is called once per frame
     public void Comenzar()
     {
-        //cambio de escena
+        SceneManager.LoadScene("CinematicaInicial");
     }
 
     public void AbrirCreditos()
