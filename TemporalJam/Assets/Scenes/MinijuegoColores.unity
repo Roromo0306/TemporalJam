@@ -465,10 +465,13 @@ MonoBehaviour:
   gen1: {fileID: 1120065610}
   gen2: {fileID: 1483820975}
   gen3: {fileID: 1321777455}
-  rojo: {fileID: 0}
-  azul: {fileID: 0}
-  amarillo: {fileID: 0}
+  rojo: {fileID: 2694707811793861909, guid: 5c6153b6bc7eb1844b31404add12a005, type: 3}
+  azul: {fileID: 118872743512156549, guid: 5aec3a70beee35e44accb079289b0f3f, type: 3}
+  amarillo: {fileID: 3320740797908009355, guid: 300e280a239831d4488ede67fea7ab90, type: 3}
   barraInferior: {fileID: 1549176044}
+  puntos: 0
+  lugarGeneracion: 0
+  bloque: 0
 --- !u!4 &1648330426
 Transform:
   m_ObjectHideFlags: 0
