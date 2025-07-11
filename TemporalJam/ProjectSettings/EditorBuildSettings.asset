@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CinematicaInicial.unity
     guid: 28d161795705d4a45bc6677a253b7999
+  - enabled: 1
+    path: Assets/Scenes/Mini_001.unity
+    guid: 138b100bf83924f419aba995f39a3f82
   m_configObjects: {}
