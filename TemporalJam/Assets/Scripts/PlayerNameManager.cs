@@ -51,14 +51,11 @@ public class PlayerNameManager : MonoBehaviour
         panelNombres.SetActive(false);
     }
 
-    /// <summary>
-    /// Escribe los nombres en los textos visibles.
-    /// </summary>
     private void ActualizarTextos()
     {
         // Si aún no hay nombres guardados, muestra un texto provisional
-        string name1 = PlayerPrefs.GetString(Player1Key, "Jugador?1");
-        string name2 = PlayerPrefs.GetString(Player2Key, "Jugador?2");
+        string name1 = PlayerPrefs.GetString(Player1Key, "");
+        string name2 = PlayerPrefs.GetString(Player2Key, "");
 
         player1NameText.text = name1;
         player2NameText.text = name2;
