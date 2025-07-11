@@ -10,6 +10,8 @@ public class MainMenuController : MonoBehaviour
     public GameObject Tutorial;
     public GameObject Creditos;
 
+    public Animator Animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,17 @@ public class MainMenuController : MonoBehaviour
     // Update is called once per frame
     public void Comenzar()
     {
+     
+        StartCoroutine(Iniciar());
+    }
+
+    IEnumerator Iniciar()
+    {
+        Animator.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene("CinematicaInicial");
+
+
     }
 
     public void AbrirCreditos()
