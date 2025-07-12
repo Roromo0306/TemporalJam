@@ -28,6 +28,20 @@ public class ColisionBorde : MonoBehaviour
     //Funcion que cambia el color de la barra al pulsar una tecla
     private void CambioColor()
     {
+
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && Input.GetKeyDown(KeyCode.RightArrow)) //rojo-amarillo
+        {
+            Color c;
+            ColorUtility.TryParseHtmlString("#FFA500", out c); //Naranja
+            Barra.color = c;
+
+            Debug.Log("c");
+
+            ry = true;
+            StartCoroutine(VueltaBlanco());
+        }
+
         if (Input.GetKeyDown(KeyCode.DownArrow)) //Azul
         {
             Barra.color = Color.cyan;
@@ -56,15 +70,6 @@ public class ColisionBorde : MonoBehaviour
             StartCoroutine(VueltaBlanco());
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftArrow) && Input.GetKeyDown(KeyCode.RightArrow)) //rojo-amarillo
-        {
-            Color c;
-            ColorUtility.TryParseHtmlString("#FFA500", out c); //Naranja
-            Barra.color = c;
-  
-            ry = true;
-            StartCoroutine(VueltaBlanco());
-        }
 
         if(Input.GetKeyDown(KeyCode.LeftArrow) && Input.GetKeyDown(KeyCode.DownArrow)) //rojo-azul
         {
