@@ -49,6 +49,91 @@ public class ColisionPerfecta : MonoBehaviour
                 }
                 Destroy(collision.gameObject);
             }
+
+            if (c.ry)
+            {
+                if (c.combo < 10)
+                {
+                    j.puntos += 1;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 10 && c.combo < 20)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador1;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 20 && c.combo < 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador2;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador3;
+                    c.combo += 1;
+                }
+                Destroy(collision.gameObject);
+            }
+
+            if (c.rb)
+            {
+                if (c.combo < 10)
+                {
+                    j.puntos += 1;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 10 && c.combo < 20)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador1;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 20 && c.combo < 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador2;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador3;
+                    c.combo += 1;
+                }
+                Destroy(collision.gameObject);
+            }
+
+            if (c.rg)
+            {
+                if (c.combo < 10)
+                {
+                    j.puntos += 1;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 10 && c.combo < 20)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador1;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 20 && c.combo < 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador2;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador3;
+                    c.combo += 1;
+                }
+                Destroy(collision.gameObject);
+            }
+           
         }
 
         if (collision.gameObject.name == "Azul(Clone)")
@@ -80,11 +165,95 @@ public class ColisionPerfecta : MonoBehaviour
                 }
                 Destroy(collision.gameObject);
             }
+
+            if (c.by)
+            {
+                if (c.combo < 10)
+                {
+                    j.puntos += 1;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 10 && c.combo < 20)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador1;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 20 && c.combo < 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador2;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador3;
+                    c.combo += 1;
+                }
+                Destroy(collision.gameObject);
+            }
+
+            if (c.bg)
+            {
+                if (c.combo < 10)
+                {
+                    j.puntos += 1;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 10 && c.combo < 20)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador1;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 20 && c.combo < 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador2;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador3;
+                    c.combo += 1;
+                }
+                Destroy(collision.gameObject);
+            }
         }
 
         if (collision.gameObject.name == "Amarillo(Clone)")
         {
             if (c.y)
+            {
+                if (c.combo < 10)
+                {
+                    j.puntos += 1;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 10 && c.combo < 20)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador1;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 20 && c.combo < 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador2;
+                    c.combo += 1;
+                }
+
+                if (c.combo >= 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador3;
+                    c.combo += 1;
+                }
+                Destroy(collision.gameObject);
+            }
+
+            if (c.yg)
             {
                 if (c.combo < 10)
                 {

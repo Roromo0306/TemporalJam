@@ -138,5 +138,11 @@ public class ColisionBorde : MonoBehaviour
         b = false;
         y = false;
         g= false;
+        ry = false;
+        rb = false;
+        rg = false;
+        by = false;
+        bg = false;
+        yg = false;
     }
 }

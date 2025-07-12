@@ -29,24 +29,113 @@ public class ColisionBuena : MonoBehaviour
                 if (c.combo < 10)
                 {
                     j.puntos += 1;
+               
                 }
 
                 if (c.combo >= 10 && c.combo < 20)
                 {
                     j.puntos = (j.puntos + 1) * c.multiplicador1;
+                   
                 }
 
                 if (c.combo >= 20 && c.combo < 30)
                 {
                     j.puntos = (j.puntos + 1) * c.multiplicador2;
+                   
                 }
 
                 if (c.combo >= 30)
                 {
                     j.puntos = (j.puntos + 1) * c.multiplicador3;
+                   
                 }
                 Destroy(collision.gameObject);
             }
+
+            if (c.ry)
+            {
+                if (c.combo < 10)
+                {
+                    j.puntos += 1;
+                   
+                }
+
+                if (c.combo >= 10 && c.combo < 20)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador1;
+                    
+                }
+
+                if (c.combo >= 20 && c.combo < 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador2;
+                    
+                }
+
+                if (c.combo >= 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador3;
+                  
+                }
+                Destroy(collision.gameObject);
+            }
+
+            if (c.rb)
+            {
+                if (c.combo < 10)
+                {
+                    j.puntos += 1;
+                   
+                }
+
+                if (c.combo >= 10 && c.combo < 20)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador1;
+                  
+                }
+
+                if (c.combo >= 20 && c.combo < 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador2;
+                   
+                }
+
+                if (c.combo >= 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador3;
+                    
+                }
+                Destroy(collision.gameObject);
+            }
+
+            if (c.rg)
+            {
+                if (c.combo < 10)
+                {
+                    j.puntos += 1;
+                   
+                }
+
+                if (c.combo >= 10 && c.combo < 20)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador1;
+                   
+                }
+
+                if (c.combo >= 20 && c.combo < 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador2;
+                   
+                }
+
+                if (c.combo >= 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador3;
+                    
+                }
+                Destroy(collision.gameObject);
+            }
+
         }
 
         if (collision.gameObject.name == "Azul(Clone)")
@@ -56,21 +145,81 @@ public class ColisionBuena : MonoBehaviour
                 if (c.combo < 10)
                 {
                     j.puntos += 1;
+                    
                 }
 
                 if (c.combo >= 10 && c.combo < 20)
                 {
                     j.puntos = (j.puntos + 1) * c.multiplicador1;
+                    
                 }
 
                 if (c.combo >= 20 && c.combo < 30)
                 {
                     j.puntos = (j.puntos + 1) * c.multiplicador2;
+                    
                 }
 
                 if (c.combo >= 30)
                 {
                     j.puntos = (j.puntos + 1) * c.multiplicador3;
+                    
+                }
+                Destroy(collision.gameObject);
+            }
+
+            if (c.by)
+            {
+                if (c.combo < 10)
+                {
+                    j.puntos += 1;
+                   
+                }
+
+                if (c.combo >= 10 && c.combo < 20)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador1;
+                    
+                }
+
+                if (c.combo >= 20 && c.combo < 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador2;
+                    
+                }
+
+                if (c.combo >= 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador3;
+                    
+                }
+                Destroy(collision.gameObject);
+            }
+
+            if (c.bg)
+            {
+                if (c.combo < 10)
+                {
+                    j.puntos += 1;
+                    
+                }
+
+                if (c.combo >= 10 && c.combo < 20)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador1;
+                    
+                }
+
+                if (c.combo >= 20 && c.combo < 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador2;
+                    
+                }
+
+                if (c.combo >= 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador3;
+                    
                 }
                 Destroy(collision.gameObject);
             }
@@ -83,21 +232,53 @@ public class ColisionBuena : MonoBehaviour
                 if (c.combo < 10)
                 {
                     j.puntos += 1;
+                    
                 }
 
                 if (c.combo >= 10 && c.combo < 20)
                 {
                     j.puntos = (j.puntos + 1) * c.multiplicador1;
+                    
                 }
 
                 if (c.combo >= 20 && c.combo < 30)
                 {
                     j.puntos = (j.puntos + 1) * c.multiplicador2;
+                    
                 }
 
                 if (c.combo >= 30)
                 {
                     j.puntos = (j.puntos + 1) * c.multiplicador3;
+                    
+                }
+                Destroy(collision.gameObject);
+            }
+
+            if (c.yg)
+            {
+                if (c.combo < 10)
+                {
+                    j.puntos += 1;
+                   
+                }
+
+                if (c.combo >= 10 && c.combo < 20)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador1;
+                    
+                }
+
+                if (c.combo >= 20 && c.combo < 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador2;
+                   
+                }
+
+                if (c.combo >= 30)
+                {
+                    j.puntos = (j.puntos + 1) * c.multiplicador3;
+                    
                 }
                 Destroy(collision.gameObject);
             }
@@ -110,21 +291,25 @@ public class ColisionBuena : MonoBehaviour
                 if (c.combo < 10)
                 {
                     j.puntos += 1;
+                    
                 }
 
                 if (c.combo >= 10 && c.combo < 20)
                 {
                     j.puntos = (j.puntos + 1) * c.multiplicador1;
+                    
                 }
 
                 if (c.combo >= 20 && c.combo < 30)
                 {
                     j.puntos = (j.puntos + 1) * c.multiplicador2;
+                    
                 }
 
                 if (c.combo >= 30)
                 {
                     j.puntos = (j.puntos + 1) * c.multiplicador3;
+                    
                 }
                 Destroy(collision.gameObject);
             }
