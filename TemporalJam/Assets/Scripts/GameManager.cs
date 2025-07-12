@@ -19,9 +19,9 @@ public class GameManager : MonoBehaviour
     int player1Score;
     int player2Score;
     bool player1Turn = true;
-    int spinsDone = 0;                // Cuenta los giros totales (máx. 2)
+    int spinsDone = 0;                
 
-    /* -------------------- */
+ 
     void Awake()
     {
         if (I == null) I = this; else { Destroy(gameObject); return; }
@@ -32,10 +32,10 @@ public class GameManager : MonoBehaviour
         RefreshScoreUI();
         RefreshButtonText();
 
-        winPanel.SetActive(false);       // Ocultamos panel de victoria
+        winPanel.SetActive(false);       
     }
 
-    /* ---------- API para Roulette ---------- */
+    
     public string GetCurrentPlayerName()
     {
         return player1Turn ? PlayerPrefs.GetString("Player1Name", "Jugador 1")
@@ -47,17 +47,15 @@ public class GameManager : MonoBehaviour
         if (player1Turn) player1Score += puntos;
         else player2Score += puntos;
 
-        spinsDone++;                     // Ya se ha completado una tirada
+        spinsDone++;                    
 
         RefreshScoreUI();
 
         if (spinsDone >= 2)
             EndGame();
         else
-            NextTurn();                  // Solo habrá un cambio de turno (de 1→2)
+            NextTurn();                  
     }
-    /* --------------------------------------- */
-
     void NextTurn()
     {
         player1Turn = !player1Turn;

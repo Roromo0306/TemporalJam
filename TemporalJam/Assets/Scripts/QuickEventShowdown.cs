@@ -6,24 +6,24 @@ public class QuickDraw : MonoBehaviour
 {
     [Header("UI")]
     public TextMeshProUGUI countdownText;     // “3‑2‑1”
-    public TextMeshProUGUI promptTextP1;       // tecla de Player 1 (WASD)
-    public TextMeshProUGUI promptTextP2;       // tecla de Player 2 (←↑↓→ símbolo)
-    public GameObject resultPanel;             // panel de victoria
-    public TextMeshProUGUI resultText;         // texto ganador
+    public TextMeshProUGUI promptTextP1;       
+    public TextMeshProUGUI promptTextP2;      
+    public GameObject resultPanel;             
+    public TextMeshProUGUI resultText;         
 
   
     [Header("Config")]
-    public float countdownStep = 1f;           // segundos entre 3‑2‑1
-    public Vector2 waitRange = new Vector2(1f, 4f); // silencio aleatorio
+    public float countdownStep = 1f;           
+    public Vector2 waitRange = new Vector2(1f, 4f); 
 
     
-    private KeyCode currentKeyP1;              // W A S D
-    private KeyCode currentKeyP2;              // flechas
+    private KeyCode currentKeyP1;              
+    private KeyCode currentKeyP2;             
     private bool promptActive;
 
-    readonly KeyCode[] keysP1 = { KeyCode.W, KeyCode.A, KeyCode.S, KeyCode.D };
-    readonly KeyCode[] keysP2 = { KeyCode.UpArrow, KeyCode.LeftArrow,
-                                  KeyCode.DownArrow, KeyCode.RightArrow };
+    readonly KeyCode[] keysP1 = { KeyCode.A, KeyCode.S, KeyCode.D, KeyCode.F };
+    readonly KeyCode[] keysP2 = { KeyCode.U, KeyCode.I,
+                                  KeyCode.O, KeyCode.P };
 
     void Start()
     {
@@ -53,7 +53,7 @@ public class QuickDraw : MonoBehaviour
         currentKeyP2 = keysP2[idx];
 
         promptTextP1.text = currentKeyP1.ToString();
-        promptTextP2.text = ArrowSymbol(currentKeyP2);
+        promptTextP2.text = currentKeyP2.ToString();
         promptTextP1.gameObject.SetActive(true);
         promptTextP2.gameObject.SetActive(true);
 
@@ -87,19 +87,6 @@ public class QuickDraw : MonoBehaviour
 
         resultPanel.SetActive(true);
         resultText.text = $"{winner} gana";
-    }
-
-   //Ayuda: convertir flecha a símbolo
-    string ArrowSymbol(KeyCode k)
-    {
-        return k switch
-        {
-            KeyCode.UpArrow => "↑",
-            KeyCode.DownArrow => "↓",
-            KeyCode.LeftArrow => "←",
-            KeyCode.RightArrow => "→",
-            _ => k.ToString()
-        };
     }
 
     

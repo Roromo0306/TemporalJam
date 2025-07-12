@@ -38,19 +38,19 @@ public class PlayerNameManager : MonoBehaviour
 
     public void SaveNamesAndStart()
     {
-        // 1. Leer de los Input?Fields (con valores por defecto si están vacíos)
+    
         string name1 = string.IsNullOrWhiteSpace(player1Input.text) ? "Jugador?1" : player1Input.text;
         string name2 = string.IsNullOrWhiteSpace(player2Input.text) ? "Jugador?2" : player2Input.text;
 
-        // 2. Guardar en PlayerPrefs
+       
         PlayerPrefs.SetString(Player1Key, name1);
         PlayerPrefs.SetString(Player2Key, name2);
         PlayerPrefs.Save();
 
-        // 3. Mostrar los nombres en pantalla
+      
         ActualizarTextos();
 
-        // 4. Ocultar el panel de entrada
+     
         panelNombres.SetActive(false);
 
         animator.SetTrigger("Aparicion");
@@ -59,7 +59,7 @@ public class PlayerNameManager : MonoBehaviour
 
     private void ActualizarTextos()
     {
-        // Si aún no hay nombres guardados, muestra un texto provisional
+       
         string name1 = PlayerPrefs.GetString(Player1Key, "");
         string name2 = PlayerPrefs.GetString(Player2Key, "");
 

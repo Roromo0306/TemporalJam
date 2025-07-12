@@ -8,7 +8,7 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     [Header("Ajustes")]
-    public float TimeLeft = 30f;          // duración por defecto
+    public float TimeLeft = 30f;          
     public bool TimerOn = false;
 
     [Header("UI")]
@@ -17,11 +17,7 @@ public class Timer : MonoBehaviour
     [Header("Referencia a enemigos (opcional)")]
     public List<GameObject> enemigos;
 
-    
-    void Start()
-    {
-        //TimerOn = true;
-    }
+   
 
     void Update()
     {

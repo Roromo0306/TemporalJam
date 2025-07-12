@@ -9,14 +9,14 @@ public class TapManager : MonoBehaviour
     public KeyCode player2Key = KeyCode.L;
 
     [Header("Referencias UI")]
-    public TextMeshProUGUI countdownText;       //  para el 3‑2‑1
+    public TextMeshProUGUI countdownText;      
     public TextMeshProUGUI p1CountText;
     public TextMeshProUGUI p2CountText;
     public GameObject resultPanel;
     public TextMeshProUGUI resultText;
 
     [Header("Timer")]
-    public Timer timer;               // arrástralo desde la escena
+    public Timer timer;            
 
     private int p1Count;
     private int p2Count;
@@ -46,7 +46,7 @@ public class TapManager : MonoBehaviour
         timer.StartTimer();
 
         inputEnabled = true;
-        timer.StartTimer(); // asegúrate de que Timer tiene StartTimer()
+        timer.StartTimer(); 
     }
 
     void Update()
