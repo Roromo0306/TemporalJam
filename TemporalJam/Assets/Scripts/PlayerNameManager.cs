@@ -18,6 +18,9 @@ public class PlayerNameManager : MonoBehaviour
     private const string Player1Key = "Player1Name";
     private const string Player2Key = "Player2Name";
 
+    public Animator animator;
+    public Animator hudAnimator;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -49,6 +52,9 @@ public class PlayerNameManager : MonoBehaviour
 
         // 4. Ocultar el panel de entrada
         panelNombres.SetActive(false);
+
+        animator.SetTrigger("Aparicion");
+        hudAnimator.SetTrigger("Hud");
     }
 
     private void ActualizarTextos()

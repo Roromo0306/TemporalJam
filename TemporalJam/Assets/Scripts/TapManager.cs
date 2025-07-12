@@ -9,7 +9,7 @@ public class TapManager : MonoBehaviour
     public KeyCode player2Key = KeyCode.L;
 
     [Header("Referencias UI")]
-    public TextMeshProUGUI countdownText;       // NUEVO – para el 3‑2‑1
+    public TextMeshProUGUI countdownText;       //  para el 3‑2‑1
     public TextMeshProUGUI p1CountText;
     public TextMeshProUGUI p2CountText;
     public GameObject resultPanel;
