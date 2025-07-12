@@ -448,6 +448,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barraInferior: {fileID: 1549176044}
   manager: {fileID: 1648330424}
+  combo: 0
+  tiempoCaida: 0.5
+  multiplicador1: 1.5
+  multiplicador2: 2
+  multiplicador3: 2.5
 --- !u!1 &1648330424
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,9 +488,11 @@ MonoBehaviour:
   rojo: {fileID: 2694707811793861909, guid: 5c6153b6bc7eb1844b31404add12a005, type: 3}
   azul: {fileID: 118872743512156549, guid: 5aec3a70beee35e44accb079289b0f3f, type: 3}
   amarillo: {fileID: 3320740797908009355, guid: 300e280a239831d4488ede67fea7ab90, type: 3}
+  verde: {fileID: 3310736545228981673, guid: 9439ac794ab41794f89ce7ca21f2e291, type: 3}
   puntos: 0
   lugarGeneracion: 0
   bloque: 0
+  doble: 0
 --- !u!4 &1648330426
 Transform:
   m_ObjectHideFlags: 0

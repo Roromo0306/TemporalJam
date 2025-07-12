@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class JuegoColores : MonoBehaviour
 {
-    public GameObject gen1, gen2, gen3, rojo, azul, amarillo;
+    public GameObject gen1, gen2, gen3, rojo, azul, amarillo, verde;
 
-    public int puntos;
-    public int lugarGeneracion, bloque;
+    public float puntos;
+    public int lugarGeneracion, bloque, doble;
     void Start()
     {
         InvokeRepeating("generacion", 0f, 3f); 
@@ -24,7 +24,8 @@ public class JuegoColores : MonoBehaviour
     void generacion()
     {
         lugarGeneracion = Random.Range(1, 4);
-        bloque = Random.Range(1, 4);
+        bloque = Random.Range(1, 5);
+        doble = Random.Range(0, 1);
 
         if(lugarGeneracion == 1)
         {
@@ -41,6 +42,11 @@ public class JuegoColores : MonoBehaviour
             if (bloque == 3)
             {
                 Instantiate(amarillo, gen1.transform);
+            }
+
+            if(bloque == 4)
+            {
+                Instantiate (verde, gen1.transform);
             }
         }
 
@@ -60,6 +66,11 @@ public class JuegoColores : MonoBehaviour
             {
                 Instantiate(amarillo, gen2.transform);
             }
+
+            if (bloque == 4)
+            {
+                Instantiate(verde, gen2.transform);
+            }
         }
 
         if (lugarGeneracion == 3)
@@ -77,6 +88,11 @@ public class JuegoColores : MonoBehaviour
             if (bloque == 3)
             {
                 Instantiate(amarillo, gen3.transform);
+            }
+
+            if (bloque == 4)
+            {
+                Instantiate(verde, gen3.transform);
             }
         }
 

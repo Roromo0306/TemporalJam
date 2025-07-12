@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 public class ColisionBorde : MonoBehaviour
@@ -8,7 +9,11 @@ public class ColisionBorde : MonoBehaviour
 
     private SpriteRenderer Barra;
 
-    private bool r = false, b = false, y = false;
+    private bool r = false, b = false, y = false, g=false;
+    public int combo = 0;
+
+    public float tiempoCaida = 0.5f;
+    public float multiplicador1 = 1.5f, multiplicador2 = 2f, multiplicador3 = 2.5f;
     void Start()
     {
         Barra = barraInferior.GetComponent<SpriteRenderer>();
@@ -43,16 +48,24 @@ public class ColisionBorde : MonoBehaviour
             y = true;
             StartCoroutine(VueltaBlanco());
         }
+
+        if(Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Barra.color = Color.green;
+            g = true;
+            StartCoroutine(VueltaBlanco());
+        }
     }
 
     //Corrutina para volver la barra blanca
     IEnumerator VueltaBlanco()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(tiempoCaida);
         Barra.color = Color.white;
         r = false;
         b = false;
         y = false;
+        g= false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -62,11 +75,34 @@ public class ColisionBorde : MonoBehaviour
         {
             if (r)
             {
-                j.puntos +=1;
+                if (combo <10)
+                {
+                    j.puntos += 1;
+                    combo += 1;
+                }
+
+                if(combo>=10 && combo < 20)
+                {
+                    j.puntos = (j.puntos + 1) * multiplicador1;
+                    combo += 1;
+                }
+                
+                if(combo>=20 && combo < 30)
+                {
+                    j.puntos = (j.puntos + 1) * multiplicador2;
+                    combo += 1;
+                }
+
+                if (combo >= 30)
+                {
+                    j.puntos = (j.puntos + 1) * multiplicador3;
+                    combo += 1;
+                }
             }
             else
             {
                 j.puntos -= 1;
+                combo = 0;
             }
             Destroy(collision.gameObject);
         }
@@ -75,11 +111,34 @@ public class ColisionBorde : MonoBehaviour
         {
             if (b)
             {
-                j.puntos += 1;
+                if (combo < 10)
+                {
+                    j.puntos += 1;
+                    combo += 1;
+                }
+
+                if (combo >= 10 && combo < 20)
+                {
+                    j.puntos = (j.puntos + 1) * multiplicador1;
+                    combo += 1;
+                }
+
+                if (combo >= 20 && combo < 30)
+                {
+                    j.puntos = (j.puntos + 1) * multiplicador2;
+                    combo += 1;
+                }
+
+                if (combo >= 30)
+                {
+                    j.puntos = (j.puntos + 1) * multiplicador3;
+                    combo += 1;
+                }
             }
             else
             {
                 j.puntos -= 1;
+                combo = 0;
             }
             Destroy(collision.gameObject);
         }
@@ -88,11 +147,70 @@ public class ColisionBorde : MonoBehaviour
         {
             if (y)
             {
-                j.puntos += 1;
+                if (combo < 10)
+                {
+                    j.puntos += 1;
+                    combo += 1;
+                }
+
+                if (combo >= 10 && combo < 20)
+                {
+                    j.puntos = (j.puntos + 1) * multiplicador1;
+                    combo += 1;
+                }
+
+                if (combo >= 20 && combo < 30)
+                {
+                    j.puntos = (j.puntos + 1) * multiplicador2;
+                    combo += 1;
+                }
+
+                if (combo >= 30)
+                {
+                    j.puntos = (j.puntos + 1) * multiplicador3;
+                    combo += 1;
+                }
             }
             else
             {
                 j.puntos -= 1;
+                combo = 0;
+            }
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "Verde(Clone)")
+        {
+            if (g)
+            {
+                if (combo < 10)
+                {
+                    j.puntos += 1;
+                    combo += 1;
+                }
+
+                if (combo >= 10 && combo < 20)
+                {
+                    j.puntos = (j.puntos + 1) * multiplicador1;
+                    combo += 1;
+                }
+
+                if (combo >= 20 && combo < 30)
+                {
+                    j.puntos = (j.puntos + 1) * multiplicador2;
+                    combo += 1;
+                }
+
+                if (combo >= 30)
+                {
+                    j.puntos = (j.puntos + 1) * multiplicador3;
+                    combo += 1;
+                }
+            }
+            else
+            {
+                j.puntos -= 1;
+                combo = 0;
             }
             Destroy(collision.gameObject);
         }
