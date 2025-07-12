@@ -30,7 +30,7 @@ public class ColisionBorde : MonoBehaviour
     {
 
 
-        if ((Input.GetKeyDown(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow)) || (Input.GetKeyDown(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow))) //rojo-amarillo
+        if (((Input.GetKeyDown(KeyCode.S) && Input.GetKey(KeyCode.D)) || (Input.GetKeyDown(KeyCode.D) && Input.GetKey(KeyCode.S))) || (Input.GetKeyDown(KeyCode.I) && Input.GetKey(KeyCode.O)) || (Input.GetKeyDown(KeyCode.O) && Input.GetKey(KeyCode.I))) //rojo-amarillo
         {
             Color c;
             ColorUtility.TryParseHtmlString("#FFA500", out c); //Naranja
@@ -41,7 +41,7 @@ public class ColisionBorde : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && Input.GetKey(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftArrow)) //rojo-azul
+        if ((Input.GetKeyDown(KeyCode.S) && Input.GetKey(KeyCode.A) || Input.GetKeyDown(KeyCode.A) && Input.GetKey(KeyCode.S)) || (Input.GetKeyDown(KeyCode.I) && Input.GetKey(KeyCode.U) || Input.GetKeyDown(KeyCode.U) && Input.GetKey(KeyCode.I))) //rojo-azul
         {
             Color c;
             ColorUtility.TryParseHtmlString("#D207F6", out c); //violeta
@@ -52,7 +52,7 @@ public class ColisionBorde : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && Input.GetKey(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftArrow)) //rojo-verde
+        if ((Input.GetKeyDown(KeyCode.S) && Input.GetKey(KeyCode.F) || Input.GetKeyDown(KeyCode.F) && Input.GetKey(KeyCode.S)) || (Input.GetKeyDown(KeyCode.I) && Input.GetKey(KeyCode.P) || Input.GetKeyDown(KeyCode.P) && Input.GetKey(KeyCode.I))) //rojo-verde
         {
             Color c;
             ColorUtility.TryParseHtmlString("#CBB22A", out c); //Amarillo raro
@@ -63,7 +63,7 @@ public class ColisionBorde : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow) && Input.GetKey(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.RightArrow) && Input.GetKey(KeyCode.DownArrow)) //azul-amarillo
+        if ((Input.GetKeyDown(KeyCode.A) && Input.GetKey(KeyCode.D) || Input.GetKeyDown(KeyCode.D) && Input.GetKey(KeyCode.A)) || (Input.GetKeyDown(KeyCode.U) && Input.GetKey(KeyCode.O) || Input.GetKeyDown(KeyCode.O) && Input.GetKey(KeyCode.U))) //azul-amarillo
         {
             Color c;
             ColorUtility.TryParseHtmlString("#8BD765", out c); //Verde raro
@@ -74,7 +74,7 @@ public class ColisionBorde : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow) && Input.GetKey(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.UpArrow) && Input.GetKey(KeyCode.DownArrow)) //azul-verde
+        if ((Input.GetKeyDown(KeyCode.A) && Input.GetKey(KeyCode.F) || Input.GetKeyDown(KeyCode.F) && Input.GetKey(KeyCode.A)) || (Input.GetKeyDown(KeyCode.U) && Input.GetKey(KeyCode.P) || Input.GetKeyDown(KeyCode.P) && Input.GetKey(KeyCode.U))) //azul-verde
         {
             Color c;
             ColorUtility.TryParseHtmlString("#14F69E", out c); //Verde azulado
@@ -85,7 +85,7 @@ public class ColisionBorde : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) && Input.GetKey(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow)) //amarillo-verde
+        if ((Input.GetKeyDown(KeyCode.D) && Input.GetKey(KeyCode.F) || Input.GetKeyDown(KeyCode.F) && Input.GetKey(KeyCode.D)) || (Input.GetKeyDown(KeyCode.O) && Input.GetKey(KeyCode.P) || Input.GetKeyDown(KeyCode.P) && Input.GetKey(KeyCode.O))) //amarillo-verde
         {
             Color c;
             ColorUtility.TryParseHtmlString("#B1FF00", out c); //Amarillo verdoso
@@ -96,7 +96,7 @@ public class ColisionBorde : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow)) //Azul
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.U)) //Azul
         {
             Barra.color = Color.cyan;
             b = true;
@@ -104,7 +104,7 @@ public class ColisionBorde : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) //Rojo
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.I)) //Rojo
         {
             Barra.color = Color.red;
             r = true;
@@ -112,7 +112,7 @@ public class ColisionBorde : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow)) //Amarillo
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.O)) //Amarillo
         {
             Barra.color = Color.yellow;
             y = true;
@@ -120,7 +120,7 @@ public class ColisionBorde : MonoBehaviour
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.UpArrow)) //Verde
+        if(Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.P)) //Verde
         {
             Barra.color = Color.green;
             g = true;
