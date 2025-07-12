@@ -10,7 +10,7 @@ public class JuegoColores : MonoBehaviour
     public int lugarGeneracion, bloque, doble, dobleC;
     void Start()
     {
-        InvokeRepeating("generacion", 0f, 1f); 
+        InvokeRepeating("generacion", 0f, 2f); 
         
     }
 

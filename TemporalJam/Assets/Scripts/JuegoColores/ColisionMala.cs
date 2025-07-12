@@ -18,7 +18,7 @@ public class ColisionMala : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        JuegoColores j = Manager.GetComponent<JuegoColores>();
+        NuevoManager j = Manager.GetComponent<NuevoManager>();
         ColisionBorde c = Borde.GetComponent<ColisionBorde>();
 
         if (collision.gameObject.name == "Rojo(Clone)" || collision.gameObject.name == "Azul(Clone)" || collision.gameObject.name == "Amarillo(Clone)" || collision.gameObject.name == "Verde(Clone)")

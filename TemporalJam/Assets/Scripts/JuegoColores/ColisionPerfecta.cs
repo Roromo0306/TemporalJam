@@ -17,7 +17,7 @@ public class ColisionPerfecta : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        JuegoColores j = Manager.GetComponent<JuegoColores>();
+        NuevoManager j = Manager.GetComponent<NuevoManager>();
         ColisionBorde c = Borde.GetComponent<ColisionBorde>();
 
         if(collision.gameObject.name == "Rojo(Clone)")
