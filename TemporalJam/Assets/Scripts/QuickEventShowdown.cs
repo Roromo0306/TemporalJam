@@ -22,8 +22,7 @@ public class QuickDraw : MonoBehaviour
     private bool promptActive;
 
     readonly KeyCode[] keysP1 = { KeyCode.A, KeyCode.S, KeyCode.D, KeyCode.F };
-    readonly KeyCode[] keysP2 = { KeyCode.U, KeyCode.I,
-                                  KeyCode.O, KeyCode.P };
+    readonly KeyCode[] keysP2 = { KeyCode.U, KeyCode.I, KeyCode.O, KeyCode.P };
 
     void Start()
     {
