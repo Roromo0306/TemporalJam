@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mini_001.unity
     guid: 138b100bf83924f419aba995f39a3f82
+  - enabled: 1
+    path: Assets/Scenes/Ruleta.unity
+    guid: ab437c33f77a8a1409c9b4dbfe2f95e0
   m_configObjects: {}
