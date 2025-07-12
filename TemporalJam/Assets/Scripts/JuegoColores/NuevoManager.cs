@@ -30,12 +30,12 @@ public class NuevoManager : MonoBehaviour
         {
             if (bloque == 1)
             {
-                Instantiate(rojo, gen1.transform);
+                Instantiate(rojo, gen2.transform);
             }
 
             if (bloque == 2)
             {
-                Instantiate(azul, gen2.transform);
+                Instantiate(azul, gen1.transform);
             }
 
             if (bloque == 3)
@@ -53,31 +53,31 @@ public class NuevoManager : MonoBehaviour
         {
             if (dobleC == 1)
             {
-                Instantiate(rojo, gen1.transform);
+                Instantiate(rojo, gen2.transform);
                 Instantiate(amarillo, gen3.transform);
             }
 
             if (dobleC == 2)
             {
-                Instantiate(rojo, gen1.transform);
-                Instantiate(azul, gen2.transform);
+                Instantiate(rojo, gen2.transform);
+                Instantiate(azul, gen1.transform);
             }
 
             if (dobleC == 3)
             {
-                Instantiate(rojo, gen1.transform);
+                Instantiate(rojo, gen2.transform);
                 Instantiate(verde, gen4.transform);
             }
 
             if (dobleC == 4)
             {
-                Instantiate(azul, gen2.transform);
+                Instantiate(azul, gen1.transform);
                 Instantiate(amarillo, gen3.transform);
             }
 
             if (dobleC == 5)
             {
-                Instantiate(azul, gen2.transform);
+                Instantiate(azul, gen1.transform);
                 Instantiate(verde, gen4.transform);
             }
 
