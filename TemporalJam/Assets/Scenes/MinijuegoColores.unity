@@ -462,7 +462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1120065611
 Transform:
   m_ObjectHideFlags: 0
@@ -493,7 +493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1321777456
 Transform:
   m_ObjectHideFlags: 0
@@ -524,7 +524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1483820976
 Transform:
   m_ObjectHideFlags: 0
@@ -663,7 +663,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.46, y: -2.99, z: -0.8}
   m_LocalScale: {x: 3.1, y: 0.01, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -685,6 +685,12 @@ MonoBehaviour:
   b: 0
   y: 0
   g: 0
+  ry: 0
+  rb: 0
+  rg: 0
+  by: 0
+  bg: 0
+  yg: 0
   combo: 0
   tiempoCaida: 0.5
   multiplicador1: 1.5
@@ -730,6 +736,7 @@ MonoBehaviour:
   lugarGeneracion: 0
   bloque: 0
   doble: 0
+  dobleC: 0
 --- !u!4 &1648330426
 Transform:
   m_ObjectHideFlags: 0
