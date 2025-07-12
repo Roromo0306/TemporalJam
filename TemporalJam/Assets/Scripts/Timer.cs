@@ -1,59 +1,60 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using System.Collections.Generic;
+using UnityEngine;
 using TMPro;
 
 public class Timer : MonoBehaviour
 {
-
-    public float TimeLeft;
+    [Header("Ajustes")]
+    public float TimeLeft = 30f;          // duración por defecto
     public bool TimerOn = false;
 
+    [Header("UI")]
     public TextMeshProUGUI TimerText;
 
- 
+    [Header("Referencia a enemigos (opcional)")]
     public List<GameObject> enemigos;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
-        TimerOn = true;
-       
+        //TimerOn = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (TimerOn)
+        if (!TimerOn) return;
+
+        if (TimeLeft > 0f)
         {
-            if (TimeLeft > 0)
-            {
-                TimeLeft -= Time.deltaTime;
-                UpdateTimer(TimeLeft);
-            }
-            else
-            {
-                Debug.Log("SACABAO");
-                TimeLeft = 0;
-                foreach (GameObject enemigo in enemigos)
-                {
-                    if (enemigo != null)
-                        enemigo.SetActive(false);
-                }
-                
-                TimerOn = false;
-            }
+            TimeLeft -= Time.deltaTime;
+            UpdateTimer(TimeLeft);
+        }
+        else
+        {
+            Debug.Log("SACABAO");
+            TimeLeft = 0f;
+
+            TimerOn = false;
         }
     }
 
     void UpdateTimer(float currentTime)
     {
-        currentTime += 1;
+        currentTime += 1f;
+        int minutes = Mathf.FloorToInt(currentTime / 60f);
+        int seconds = Mathf.FloorToInt(currentTime % 60f);
+        TimerText.text = $"{minutes:00} : {seconds:00}";
+    }
 
-        float minutes = Mathf.FloorToInt(currentTime / 60);
-        float seconds = Mathf.FloorToInt(currentTime % 60);
+    public void StartTimer(float customDuration = -1f)
+    {
+        TimeLeft = customDuration > 0f ? customDuration : TimeLeft;
+        TimerOn = true;
 
-        TimerText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+        // Refresca la UI inmediatamente
+        UpdateTimer(TimeLeft);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class TapManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class TapManager : MonoBehaviour
     public KeyCode player2Key = KeyCode.L;
 
     [Header("Referencias UI")]
+    public TextMeshProUGUI countdownText;       // NUEVO – para el 3‑2‑1
     public TextMeshProUGUI p1CountText;
     public TextMeshProUGUI p2CountText;
     public GameObject resultPanel;
@@ -18,31 +20,51 @@ public class TapManager : MonoBehaviour
 
     private int p1Count;
     private int p2Count;
-    private bool inputEnabled = true;
+    private bool inputEnabled = false;
 
-    private void Start()
+    void Start()
     {
+        countdownText.gameObject.SetActive(true);
+        p1CountText.text = "0";
+        p2CountText.text = "0";
         resultPanel.SetActive(false);
+
+        StartCoroutine(CountdownThenStart());
     }
+
+    IEnumerator CountdownThenStart()
+    {
+        for (int i = 3; i > 0; i--)
+        {
+            countdownText.text = i.ToString();
+            yield return new WaitForSeconds(1f);
+        }
+
+        countdownText.text = "¡YA!";
+        yield return new WaitForSeconds(0.5f);
+        countdownText.gameObject.SetActive(false);
+        timer.StartTimer();
+
+        inputEnabled = true;
+        timer.StartTimer(); // asegúrate de que Timer tiene StartTimer()
+    }
+
     void Update()
     {
         if (!inputEnabled) return;
 
-        //–– Jugador 1 ––//
         if (Input.GetKeyDown(player1Key))
         {
             p1Count++;
             p1CountText.text = p1Count.ToString();
         }
 
-        //–– Jugador 2 ––//
         if (Input.GetKeyDown(player2Key))
         {
             p2Count++;
             p2CountText.text = p2Count.ToString();
         }
 
-        // Cuando el Timer se detiene, mostramos ganador
         if (!timer.TimerOn && inputEnabled)
         {
             inputEnabled = false;
