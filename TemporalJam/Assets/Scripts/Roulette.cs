@@ -23,7 +23,9 @@ public class Roulette : MonoBehaviour
     bool spinning;       
     bool decelerating;   
     float spinTimer;      
-    float waitTimer;     
+    float waitTimer;
+
+    public AudioSource audio;
 
     
     void Awake()
@@ -74,7 +76,7 @@ public class Roulette : MonoBehaviour
     {
         if (spinning) return;
 
-       
+       audio.Play();
         GameManager.I.DisableSpinButton();
 
         rb.angularVelocity = 0f;

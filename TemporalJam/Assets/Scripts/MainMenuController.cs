@@ -12,6 +12,8 @@ public class MainMenuController : MonoBehaviour
 
     public Animator Animator;
 
+    public AudioSource audio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +25,9 @@ public class MainMenuController : MonoBehaviour
     // Update is called once per frame
     public void Comenzar()
     {
-     
+        audio.Play();
         StartCoroutine(Iniciar());
+        
     }
 
     IEnumerator Iniciar()
@@ -38,26 +41,34 @@ public class MainMenuController : MonoBehaviour
 
     public void AbrirCreditos()
     {
+        audio.Play();
         Creditos.SetActive(true);
         Tutorial.SetActive(false);
         MainMenu.SetActive(false);
+       
     }
 
     public void AbrirTutorial()
     {
+        audio.Play();
         Creditos.SetActive(false);
         Tutorial.SetActive(true);
         MainMenu.SetActive(false);
+        
     }
 
     public void AbrirMenu()
     {
+        audio.Play();
         Creditos.SetActive(false);
         Tutorial.SetActive(false);
         MainMenu.SetActive(true);
+        audio.Play();
     }
     public void Quit()
     {
+        audio.Play();
         Application.Quit();
+        
     }
 }
