@@ -773,9 +773,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ac5a2a32dacb6d4cb53ebfa67a909e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minRotatePower: 20
-  maxRotatePower: 25
-  stopPower: 35
+  minRotatePower: 50
+  maxRotatePower: 55
+  stopPower: 75
   spinDuration: 5
   angleOffset: 22.5
   sectorRewards: 64000000c80000002c01000090010000f401000058020000bc02000020030000
