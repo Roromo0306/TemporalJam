@@ -2239,7 +2239,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1159405519}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1767756475}
+        m_TargetAssemblyTypeName: Canvas1, Assembly-CSharp
+        m_MethodName: CambioM
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1159405519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3242,7 +3254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   J1: {fileID: 1449695988}
   J2: {fileID: 719930539}
-  ads: {fileID: 1159405518}
+  adsD: {fileID: 1159405518}
   Manager: {fileID: 1107999078}
   canvas: {fileID: 1767756478}
   j1: 0

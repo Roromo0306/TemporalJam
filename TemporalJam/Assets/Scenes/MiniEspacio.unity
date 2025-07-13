@@ -1873,7 +1873,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 414805426}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1091336372}
+        m_TargetAssemblyTypeName: Canvas1, Assembly-CSharp
+        m_MethodName: CambioE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &414805426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2944,7 +2956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   J1: {fileID: 222011807}
   J2: {fileID: 324989040}
-  ads: {fileID: 414805425}
+  adsD: {fileID: 414805425}
   Manager: {fileID: 1748573332}
   canvas: {fileID: 1091336375}
   j1: 0
@@ -3792,7 +3804,7 @@ MonoBehaviour:
   doble: 0
   dobleC: 0
   lugarGeneracion: 0
-  tiempoRestante: 20
+  tiempoRestante: 5
   tiempoOn: 0
   jugador: 0
   colorbarra: 0
