@@ -5,6 +5,8 @@ using System.Collections;
 
 public class PlayerNameManager : MonoBehaviour
 {
+    public Canvas c;
+
     [Header("Input Fields")]
     public TMP_InputField player1Input;
     public TMP_InputField player2Input;
@@ -40,6 +42,7 @@ public class PlayerNameManager : MonoBehaviour
             player2Input.text = PlayerPrefs.GetString(Player2Key);
 
         ActualizarTextos();
+        c.enabled = false;
     }
 
     /// <summary>Guarda nombres, oculta el panel y lanza animaciones.</summary>
@@ -65,8 +68,11 @@ public class PlayerNameManager : MonoBehaviour
         if (Puestos) Puestos.SetTrigger("Puestos");
         StartCoroutine(PopUp());
 
+        c.enabled = true;
+
         // Arranca la secuencia de sprites
         if (seqPlayer) seqPlayer.Play();
+
     }
 
     private IEnumerator PopUp()

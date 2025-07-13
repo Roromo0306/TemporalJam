@@ -75,6 +75,9 @@ public class NuevoManager : MonoBehaviour
             c.J2.gameObject.SetActive(true);
             c.J1.gameObject.SetActive(false);
 
+            c.Jugador1.gameObject.SetActive(false);
+            c.Jugador2.gameObject.SetActive(true);
+
             colorbarra = 0;
             
         }
@@ -94,6 +97,11 @@ public class NuevoManager : MonoBehaviour
 
             c.J2.gameObject.SetActive(false);
             c.ads.gameObject.SetActive(true);
+
+            c.Jugador2.gameObject.SetActive(false);
+            c.Bienvenido.gameObject.SetActive(false);
+            c.Empieza.gameObject.SetActive(false);
+            c.Siguiente.gameObject.SetActive(true);
             colorbarra = 0;
             
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 public class Canvas1 : MonoBehaviour
@@ -13,6 +14,8 @@ public class Canvas1 : MonoBehaviour
 
     public float j1, j2;
 
+    public TextMeshProUGUI Jugador1, Jugador2, Bienvenido, Empieza, Siguiente;
+
      //public float punt1, punt2;
     void Start()
     {
@@ -22,6 +25,9 @@ public class Canvas1 : MonoBehaviour
         Time.timeScale = 0;
         J2.gameObject.SetActive(false);
         ads.gameObject.SetActive(false);
+
+        Jugador2.gameObject.SetActive(false);
+        Siguiente.gameObject.SetActive(false);
     }
 
     public void jugador1()
@@ -44,6 +50,7 @@ public class Canvas1 : MonoBehaviour
     public void Cambio()
     {
         SceneManager.LoadScene("MiniEspacio");
+        Time.timeScale = 1;
     }
 
     void Update()
