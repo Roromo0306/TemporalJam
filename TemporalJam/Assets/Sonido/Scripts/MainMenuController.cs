@@ -33,10 +33,7 @@ public class MainMenuController : MonoBehaviour
     IEnumerator Iniciar()
     {
         Animator.SetTrigger("FadeIn");
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("CinematicaInicial");
-
-
+        yield return null;
     }
 
     public void AbrirCreditos()

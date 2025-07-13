@@ -19,7 +19,9 @@ public class GameManager : MonoBehaviour
     int player1Score;
     int player2Score;
     bool player1Turn = true;
-    int spinsDone = 0;                
+    int spinsDone = 0;
+
+    float puntosfinales;
 
  
     void Awake()
@@ -69,13 +71,27 @@ public class GameManager : MonoBehaviour
 
         string winner;
         if (Puntos.Instance.punt1 > Puntos.Instance.punt2)
+        {
             winner = PlayerPrefs.GetString("Player1Name", "Jugador 1");
-        else if (Puntos.Instance.punt2 > Puntos.Instance.punt1)
-            winner = PlayerPrefs.GetString("Player2Name", "Jugador 2");
+            puntosfinales = Puntos.Instance.punt1;
+        }
         else
-            winner = "¡Empate!";
+        {
+            if (Puntos.Instance.punt2 > Puntos.Instance.punt1)
+            {
+                winner = PlayerPrefs.GetString("Player2Name", "Jugador 2");
+                puntosfinales = Puntos.Instance.punt2;
+            }
+            else
+            {
+                winner = "¡Empate!";
+            }
+                
+        }
+        
+        
 
-        winText.text = $"{winner} ha ganado";
+        winText.text = $"{winner} ha ganado con ¨{puntosfinales} puntos";
         winPanel.SetActive(true);
     }
 
