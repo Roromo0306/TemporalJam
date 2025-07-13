@@ -2,18 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Canvas1 : MonoBehaviour
 {
-    public Button J1, J2;
+    public Button J1, J2, ads;
     public GameObject Manager;
     public Canvas canvas;
 
-     public float punt1, punt2;
+    public float j1, j2;
+
+     //public float punt1, punt2;
     void Start()
     {
         J1.onClick.AddListener(jugador1);
         J2.onClick.AddListener(jugador2);
+        ads.onClick.AddListener(Cambio);
         Time.timeScale = 0;
     }
 
@@ -34,8 +39,14 @@ public class Canvas1 : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void Cambio()
+    {
+        SceneManager.LoadScene("MiniEspacio");
+    }
+
     void Update()
     {
-        
+        j1 = Puntos.Instance.punt1;
+        j2 = Puntos.Instance.punt2;
     }
 }

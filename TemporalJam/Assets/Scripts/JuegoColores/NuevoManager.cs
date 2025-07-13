@@ -10,7 +10,7 @@ public class NuevoManager : MonoBehaviour
     public float puntos;
     public int bloque, doble, dobleC, lugarGeneracion;
 
-    public float tiempoRestante = 10f;
+    public float tiempoRestante = 20f;
     public bool tiempoOn = false;
 
      public int jugador = 0, colorbarra =0;
@@ -32,7 +32,7 @@ public class NuevoManager : MonoBehaviour
     {
         if(jugador == 1)
         {
-            InvokeRepeating("generacion1", 0f, 2f);
+            InvokeRepeating("generacion1", 3f, 2f);
             StartCoroutine(cuentaatras(tiempoRestante));
             jugador = 0;
             colorbarra = 1;
@@ -40,7 +40,7 @@ public class NuevoManager : MonoBehaviour
 
         if(jugador == 2)
         {
-            InvokeRepeating("generacion2", 0f, 2f);
+            InvokeRepeating("generacion2", 3f, 2f);
             StartCoroutine(cuentaatras(tiempoRestante));
             jugador = 0;
             colorbarra = 2;
@@ -62,7 +62,7 @@ public class NuevoManager : MonoBehaviour
         Time.timeScale = 0;
         if(colorbarra == 1)
         {
-            c.punt1= puntos;
+            Puntos.Instance.punt1 += puntos;
             puntos = 0;
             CancelInvoke("generacion1");
 
@@ -78,9 +78,16 @@ public class NuevoManager : MonoBehaviour
 
         if(colorbarra == 2)
         {
-            c.punt2 = puntos;
+            Puntos.Instance.punt2 += puntos;
+            Debug.Log("J1: " + Puntos.Instance.punt1 + " J2: " + Puntos.Instance.punt2);
             puntos = 0;
             CancelInvoke("generacion2");
+
+            foreach (var obj in instanciados)
+            {
+                if (obj != null) Destroy(obj);
+            }
+            instanciados.Clear();
             colorbarra = 0;
             
         }
