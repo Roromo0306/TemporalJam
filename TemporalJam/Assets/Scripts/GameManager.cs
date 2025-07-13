@@ -68,9 +68,9 @@ public class GameManager : MonoBehaviour
         spinButton.interactable = false;
 
         string winner;
-        if (player1Score > player2Score)
+        if (Puntos.Instance.punt1 > Puntos.Instance.punt2)
             winner = PlayerPrefs.GetString("Player1Name", "Jugador 1");
-        else if (player2Score > player1Score)
+        else if (Puntos.Instance.punt2 > Puntos.Instance.punt1)
             winner = PlayerPrefs.GetString("Player2Name", "Jugador 2");
         else
             winner = "¡Empate!";

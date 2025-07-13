@@ -4,6 +4,8 @@ using System.Collections;
 
 public class QuickDraw : MonoBehaviour
 {
+    
+
     [Header("UI")]
     public TextMeshProUGUI countdownText;     // “3‑2‑1”
     public TextMeshProUGUI promptTextP1;       
@@ -68,12 +70,17 @@ public class QuickDraw : MonoBehaviour
         if (Input.GetKeyDown(currentKeyP1))
         {
             ShowWinner("Jugador 1");
+            Puntos.Instance.punt1 = Puntos.Instance.punt1 * 1.05f;
         }
         // Jugador 2
         else if (Input.GetKeyDown(currentKeyP2))
         {
             ShowWinner("Jugador 2");
+            Puntos.Instance.punt2 = Puntos.Instance.punt2*1.05f;
+           
         }
+
+        Debug.Log("J1: " + Puntos.Instance.punt1 + " J2: " + Puntos.Instance.punt2);
     }
 
     //Declarar ganador

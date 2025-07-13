@@ -3,7 +3,8 @@
 [RequireComponent(typeof(Rigidbody2D))]
 public class Roulette : MonoBehaviour
 {
-   
+    private bool Sasalele = false;
+
     [Header("Fuerzas")]
     public float minRotatePower = 1500f;
     public float maxRotatePower = 3000f;
@@ -109,7 +110,18 @@ public class Roulette : MonoBehaviour
         string nombre = GameManager.I.GetCurrentPlayerName();
         Debug.Log($"{nombre} ha ganado {reward} puntos!");
 
-        
+        //Jugador1
+        if (!Sasalele)
+        {
+            Puntos.Instance.punt1 += reward;
+            Sasalele = true;
+        }
+        //Jugador2
+        if (Sasalele)
+        {
+            Puntos.Instance.punt2 += reward;
+        }
+
         GameManager.I.AddScoreToCurrentPlayer(reward);
     }
 }

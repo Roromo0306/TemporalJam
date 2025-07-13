@@ -96,7 +96,7 @@ public class NuevoManager : MonoBehaviour
             instanciados.Clear();
 
             c.J2.gameObject.SetActive(false);
-            c.ads.gameObject.SetActive(true);
+            c.adsD.gameObject.SetActive(true);
 
             c.Jugador2.gameObject.SetActive(false);
             c.Bienvenido.gameObject.SetActive(false);

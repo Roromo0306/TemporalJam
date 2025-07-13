@@ -77,10 +77,26 @@ public class TapManager : MonoBehaviour
         resultPanel.SetActive(true);
 
         if (p1Count > p2Count)
+        {
             resultText.text = $"¡Jugador 1 gana!\n{p1Count} vs {p2Count}";
-        else if (p2Count > p1Count)
-            resultText.text = $"¡Jugador 2 gana!\n{p2Count} vs {p1Count}";
-        else
-            resultText.text = $"¡Empate!\n{p1Count} – {p2Count}";
+            Puntos.Instance.punt1 = Puntos.Instance.punt1 * 1.1f;
+        }
+        else 
+        {
+
+            if (p2Count > p1Count)
+            {
+                resultText.text = $"¡Jugador 2 gana!\n{p2Count} vs {p1Count}";
+                Puntos.Instance.punt2 = Puntos.Instance.punt2 * 1.1f;
+            }
+            else
+            {
+                resultText.text = $"¡Empate!\n{p1Count} – {p2Count}";
+            }
+                
+        }
+            
+            
+            
     }
 }
