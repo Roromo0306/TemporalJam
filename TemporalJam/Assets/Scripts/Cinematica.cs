@@ -23,7 +23,7 @@ public class Cinematica : MonoBehaviour
     {
         animator2.SetTrigger("FadeIn");
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("Mini_001");
+        SceneManager.LoadScene("MiniDesierto");
 
 
     }
