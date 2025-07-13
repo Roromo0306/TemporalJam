@@ -22,7 +22,7 @@ public class ColisionPerfecta : MonoBehaviour
         ColisionBorde c = Borde.GetComponent<ColisionBorde>();
 
         //Rojo
-        if(collision.gameObject.name == "Rojo(Clone)")
+        if(collision.gameObject.name == "Rojo(Clone)" || collision.gameObject.name == "Rojo1(Clone)" || collision.gameObject.name == "Rojo2(Clone)")
         {
             if (c.r)
             {
@@ -139,7 +139,7 @@ public class ColisionPerfecta : MonoBehaviour
         }
 
         //Azul
-        if (collision.gameObject.name == "Azul(Clone)")
+        if (collision.gameObject.name == "Azul(Clone)" || collision.gameObject.name == "Azul1(Clone)" || collision.gameObject.name == "Azul2(Clone)")
         {
             if (c.b)
             {
@@ -255,7 +255,7 @@ public class ColisionPerfecta : MonoBehaviour
         }
 
         //Amarillo
-        if (collision.gameObject.name == "Amarillo(Clone)")
+        if (collision.gameObject.name == "Amarillo(Clone)" || collision.gameObject.name == "Amarillo1(Clone)" || collision.gameObject.name == "Amarillo2(Clone)")
         {
             if (c.y)
             {
@@ -371,7 +371,7 @@ public class ColisionPerfecta : MonoBehaviour
         }
 
         //Verde
-        if (collision.gameObject.name == "Verde(Clone)")
+        if (collision.gameObject.name == "Verde(Clone)" || collision.gameObject.name == "Verde1(Clone)" || collision.gameObject.name == "Verde2(Clone)")
         {
             if (c.g)
             {
