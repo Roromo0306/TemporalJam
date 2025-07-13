@@ -13,7 +13,7 @@ public class NuevoManager : MonoBehaviour
     public float tiempoRestante = 20f;
     public bool tiempoOn = false;
 
-     public int jugador = 0, colorbarra =0;
+    public int jugador = 0, colorbarra =0;
 
     private List<GameObject> instanciados = new List<GameObject>();
 
