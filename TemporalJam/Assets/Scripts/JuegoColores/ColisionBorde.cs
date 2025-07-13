@@ -127,7 +127,7 @@ public class ColisionBorde : MonoBehaviour
                 Barra.color = Color.green;
                 g = true;
                 StartCoroutine(VueltaBlanco());
-                return;
+                return; 
             }
         }
 
