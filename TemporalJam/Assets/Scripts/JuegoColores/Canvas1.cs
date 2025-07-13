@@ -20,6 +20,8 @@ public class Canvas1 : MonoBehaviour
         J2.onClick.AddListener(jugador2);
         ads.onClick.AddListener(Cambio);
         Time.timeScale = 0;
+        J2.gameObject.SetActive(false);
+        ads.gameObject.SetActive(false);
     }
 
     public void jugador1()

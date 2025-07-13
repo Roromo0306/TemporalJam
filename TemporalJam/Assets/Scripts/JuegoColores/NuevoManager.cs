@@ -72,6 +72,9 @@ public class NuevoManager : MonoBehaviour
             }
             instanciados.Clear();
 
+            c.J2.gameObject.SetActive(true);
+            c.J1.gameObject.SetActive(false);
+
             colorbarra = 0;
             
         }
@@ -88,6 +91,9 @@ public class NuevoManager : MonoBehaviour
                 if (obj != null) Destroy(obj);
             }
             instanciados.Clear();
+
+            c.J2.gameObject.SetActive(false);
+            c.ads.gameObject.SetActive(true);
             colorbarra = 0;
             
         }
