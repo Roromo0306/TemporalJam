@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3497519620746375087}
   - component: {fileID: 2572473269924616879}
   m_Layer: 0
-  m_Name: Rojo 1
+  m_Name: Rojo1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,4 +171,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8ebf6655c7d6f4cbd14e33a38fa648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 1
+  velocidad: 3.5

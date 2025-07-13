@@ -17,6 +17,8 @@ public class NuevoManager : MonoBehaviour
 
     private List<GameObject> instanciados = new List<GameObject>();
 
+    public float TiempoSpawn = 0f;
+
     void Start()
     {
         
@@ -32,7 +34,7 @@ public class NuevoManager : MonoBehaviour
     {
         if(jugador == 1)
         {
-            InvokeRepeating("generacion1", 3f, 2f);
+            InvokeRepeating("generacion1", 3f, TiempoSpawn);
             StartCoroutine(cuentaatras(tiempoRestante));
             jugador = 0;
             colorbarra = 1;

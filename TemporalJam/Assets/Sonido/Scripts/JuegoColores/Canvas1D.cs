@@ -16,7 +16,7 @@ public class Canvas1 : MonoBehaviour
 
     public TextMeshProUGUI Jugador1, Jugador2, Bienvenido, Empieza, Siguiente;
 
-     //public float punt1, punt2;
+     public float punt1, punt2;
     void Start()
     {
         J1.onClick.AddListener(jugador1);

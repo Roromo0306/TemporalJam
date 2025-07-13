@@ -438,7 +438,7 @@ Transform:
   m_GameObject: {fileID: 81261253}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.734, y: -4.165, z: -0.8}
+  m_LocalPosition: {x: 1.734, y: -6.415, z: -0.8}
   m_LocalScale: {x: 3.237885, y: 0.01, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2812,7 +2812,7 @@ Transform:
   m_GameObject: {fileID: 959162054}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7753, y: -4.1624, z: -0.8}
+  m_LocalPosition: {x: -1.7753, y: -6.9124, z: -0.8}
   m_LocalScale: {x: 3.2605305, y: 0.004774, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3804,10 +3804,11 @@ MonoBehaviour:
   doble: 0
   dobleC: 0
   lugarGeneracion: 0
-  tiempoRestante: 5
+  tiempoRestante: 35
   tiempoOn: 0
   jugador: 0
   colorbarra: 0
+  TiempoSpawn: 0.3
 --- !u!4 &1748573334
 Transform:
   m_ObjectHideFlags: 0
