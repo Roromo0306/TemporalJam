@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ColisionBuena : MonoBehaviour
 {
-    public GameObject Manager, Borde;
+    public GameObject Manager, Borde, Borde2;
     
     void Start()
     {

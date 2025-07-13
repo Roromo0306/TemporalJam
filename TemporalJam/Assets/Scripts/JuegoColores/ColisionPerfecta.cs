@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ColisionPerfecta : MonoBehaviour
 {
-    public GameObject Manager, Borde;
+    public GameObject Manager, Borde, Borde2;
     private GameObject colisionado2;
     void Start()
     {

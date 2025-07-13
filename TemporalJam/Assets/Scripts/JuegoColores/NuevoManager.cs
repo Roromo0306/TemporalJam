@@ -4,22 +4,90 @@ using UnityEngine;
 
 public class NuevoManager : MonoBehaviour
 {
-    public GameObject gen1, gen2, gen3, gen4, rojo, azul, amarillo, verde;
+    public GameObject gen1, gen1_2, gen2, gen2_2, gen3, gen3_2, gen4, gen4_2, rojo, azul, amarillo, verde;
+    public Canvas can;
 
     public float puntos;
     public int bloque, doble, dobleC, lugarGeneracion;
+
+    public float tiempoRestante = 10f;
+    public bool tiempoOn = false;
+
+     public int jugador = 0, colorbarra =0;
+
+    private List<GameObject> instanciados = new List<GameObject>();
+
     void Start()
     {
-        InvokeRepeating("generacion", 0f, 2f);
+        
     }
 
 
     void Update()
     {
-
+        juego();
     }
 
-    void generacion()
+    public void juego()
+    {
+        if(jugador == 1)
+        {
+            InvokeRepeating("generacion1", 0f, 2f);
+            StartCoroutine(cuentaatras(tiempoRestante));
+            jugador = 0;
+            colorbarra = 1;
+        } 
+
+        if(jugador == 2)
+        {
+            InvokeRepeating("generacion2", 0f, 2f);
+            StartCoroutine(cuentaatras(tiempoRestante));
+            jugador = 0;
+            colorbarra = 2;
+        }
+    }
+
+
+    private IEnumerator cuentaatras(float tiempoRestante)
+    {
+        Canvas1 c = can.GetComponent<Canvas1>();
+        while(tiempoRestante > 0)
+        {
+            tiempoRestante -= Time.deltaTime;
+            yield return null;
+        }
+
+        //se acaba el tiempo
+        c.canvas.enabled = true;
+        Time.timeScale = 0;
+        if(colorbarra == 1)
+        {
+            c.punt1= puntos;
+            puntos = 0;
+            CancelInvoke("generacion1");
+
+            foreach(var obj in instanciados)
+            {
+                if(obj != null) Destroy(obj);
+            }
+            instanciados.Clear();
+
+            colorbarra = 0;
+            
+        }
+
+        if(colorbarra == 2)
+        {
+            c.punt2 = puntos;
+            puntos = 0;
+            CancelInvoke("generacion2");
+            colorbarra = 0;
+            
+        }
+        
+    }
+
+    void generacion1()
     {
         bloque = Random.Range(1, 5);
         doble = Random.Range(0, 4);
@@ -30,22 +98,26 @@ public class NuevoManager : MonoBehaviour
         {
             if (bloque == 1)
             {
-                Instantiate(rojo, gen2.transform);
+               GameObject o= Instantiate(rojo, gen2.transform);
+               instanciados.Add(o);
             }
 
             if (bloque == 2)
             {
-                Instantiate(azul, gen1.transform);
+                GameObject o = Instantiate(azul, gen1.transform);
+                instanciados.Add(o);
             }
 
             if (bloque == 3)
             {
-                Instantiate(amarillo, gen3.transform);
+                GameObject o = Instantiate(amarillo, gen3.transform);
+                instanciados.Add(o);
             }
 
             if (bloque == 4)
             {
-                Instantiate(verde, gen4.transform);
+                GameObject o = Instantiate(verde, gen4.transform);
+                instanciados.Add(o);
             }
         }
 
@@ -53,38 +125,137 @@ public class NuevoManager : MonoBehaviour
         {
             if (dobleC == 1)
             {
-                Instantiate(rojo, gen2.transform);
-                Instantiate(amarillo, gen3.transform);
+                GameObject o = Instantiate(rojo, gen2.transform);
+                GameObject y = Instantiate(amarillo, gen3.transform);
+                instanciados.Add(o);
+                instanciados.Add(y);
             }
 
             if (dobleC == 2)
             {
-                Instantiate(rojo, gen2.transform);
-                Instantiate(azul, gen1.transform);
+                GameObject o = Instantiate(rojo, gen2.transform);
+                GameObject y = Instantiate(azul, gen1.transform);
+                instanciados.Add(o);
+                instanciados.Add(y);
             }
 
             if (dobleC == 3)
             {
-                Instantiate(rojo, gen2.transform);
-                Instantiate(verde, gen4.transform);
+                GameObject o = Instantiate(rojo, gen2.transform);
+                GameObject y = Instantiate(verde, gen4.transform);
+                instanciados.Add(o);
+                instanciados.Add(y);
             }
 
             if (dobleC == 4)
             {
-                Instantiate(azul, gen1.transform);
-                Instantiate(amarillo, gen3.transform);
+                GameObject o = Instantiate(azul, gen1.transform);
+                GameObject y = Instantiate(amarillo, gen3.transform);
+                instanciados.Add(o);
+                instanciados.Add(y);
             }
 
             if (dobleC == 5)
             {
-                Instantiate(azul, gen1.transform);
-                Instantiate(verde, gen4.transform);
+                GameObject o = Instantiate(azul, gen1.transform);
+                GameObject y = Instantiate(verde, gen4.transform);
+                instanciados.Add(o);
+                instanciados.Add(y);
             }
 
             if (dobleC == 6)
             {
-                Instantiate(amarillo, gen3.transform);
-                Instantiate(verde, gen4.transform);
+                GameObject o = Instantiate(amarillo, gen3.transform);
+                GameObject y = Instantiate(verde, gen4.transform);
+                instanciados.Add(o);
+                instanciados.Add(y);
+            }
+        }
+    }
+
+
+    void generacion2()
+    {
+        bloque = Random.Range(1, 5);
+        doble = Random.Range(0, 4);
+        dobleC = Random.Range(1, 7);
+        lugarGeneracion = Random.Range(0, 4);
+
+        if (doble == 0 || doble == 1 || doble == 2)
+        {
+            if (bloque == 1)
+            {
+                GameObject o = Instantiate(rojo, gen2_2.transform);
+                instanciados.Add(o);
+            }
+
+            if (bloque == 2)
+            {
+                GameObject o = Instantiate(azul, gen1_2.transform);
+                instanciados.Add(o);
+            }
+
+            if (bloque == 3)
+            {
+                GameObject o = Instantiate(amarillo, gen3_2.transform);
+                instanciados.Add(o);
+            }
+
+            if (bloque == 4)
+            {
+                GameObject o = Instantiate(verde, gen4_2.transform);
+                instanciados.Add(o);
+            }
+        }
+
+        if (doble == 3)
+        {
+            if (dobleC == 1)
+            {
+                GameObject o = Instantiate(rojo, gen2_2.transform);
+                GameObject y = Instantiate(amarillo, gen3_2.transform);
+                instanciados.Add(o);
+                instanciados.Add(y);
+            }
+
+            if (dobleC == 2)
+            {
+                GameObject o = Instantiate(rojo, gen2_2.transform);
+                GameObject y = Instantiate(azul, gen1_2.transform);
+                instanciados.Add(o);
+                instanciados.Add(y);
+            }
+
+            if (dobleC == 3)
+            {
+                GameObject o = Instantiate(rojo, gen2_2.transform);
+                GameObject y = Instantiate(verde, gen4_2.transform);
+                instanciados.Add(o);
+                instanciados.Add(y);
+            }
+
+            if (dobleC == 4)
+            {
+                GameObject o = Instantiate(azul, gen1_2.transform);
+                GameObject y = Instantiate(amarillo, gen3_2.transform);
+                instanciados.Add(o);
+                instanciados.Add(y);
+            }
+
+            if (dobleC == 5)
+            {
+                GameObject o = Instantiate(azul, gen1_2.transform);
+                GameObject y = Instantiate(verde, gen4_2.transform);
+                instanciados.Add(o);
+                instanciados.Add(y);
+            }
+
+            if (dobleC == 6)
+            {
+                GameObject o = Instantiate(amarillo, gen3_2.transform);
+                GameObject y = Instantiate(verde, gen4_2.transform);
+                instanciados.Add(o);
+                instanciados.Add(y);
             }
         }
     }
